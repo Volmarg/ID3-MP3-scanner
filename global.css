@@ -1,0 +1,251 @@
+.allAlbums{
+    align-self: center;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    margin: 10px;
+
+}
+
+.singleAlbum{
+    flex-wrap: wrap;
+
+    width: 250px;
+    height: 200px;
+
+    margin:10px;
+
+    opacity:0;
+    display:none;
+}
+
+.singleAlbum > div> img {
+    margin-top:10px;
+    border-radius: 5px;
+}
+
+.singleAlbum > div {
+    margin-left:10px;
+}
+
+.aboutAlbum{
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.3);
+    border:1px solid rgba(0,0,0,0.05);
+    position:relative;
+
+    background-color:rgb(242, 120, 126);
+    
+    height: 100px;
+    width: inherit;
+
+
+}
+
+.aboutFilesStructure{
+    padding:3px;
+    padding-top: 10px;
+    width:inherit;
+    height:100px;
+
+    position: relative;
+
+    border:1px rgba(0,0,0,0.3) solid;
+    border-top:0px;
+}
+
+
+/* LISTINGI DANYCH np. tracks */
+.listing{
+    font-size:12px;
+    opacity:0;
+    visibility:hidden;
+    transition:150ms linear;
+
+    background-color:rgba(0,0,0,0.9); 
+    padding:10px;
+    position:absolute;
+    color:white;
+
+
+    width: 300px;    
+
+    border-radius:2px;
+    z-index:-1;
+}
+
+show-tracks:hover+tracks-listing>.listing,.tracks.listing:hover{
+
+    visibility:visible; 
+    opacity:1;
+    position:absolute;
+    transition:300ms linear;
+    z-index:3;
+}
+
+show-structure:hover+structure-listing>.listing,.structure.listing:hover{
+
+    position:absolute;
+    min-width: 300px;  
+    width:500px;
+
+    opacity:1;
+    visibility:visible;
+
+    transition:300ms linear;
+    z-index:3;
+}
+.tracks.section, .structure.section {
+    float:left;
+    margin-left:25px;
+}
+
+.aboutAlbum>div+div{
+    float:left;
+    padding-top:0px;
+}
+
+.aboutAlbum>div{
+    padding-left:10px;
+    padding-top:10px;
+
+}
+/* BUTTONY */
+
+.icon{
+
+    border:1px solid rgba(0,0,0,0.4);
+    background-color:rgba(255,255,255,0.5);
+    height: 25px;
+    margin: 3px;
+    padding: 1px;
+    width: 25px;
+
+}
+
+.buttonsSection{
+    margin-top:10px;
+    position:relative;
+
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+
+}
+
+.buttonsSection>button, .buttonFilter{
+
+    width:150px;
+    height:45px;
+    padding: 10px;
+    color:white;
+
+    background:none;
+    border:none;
+    background-color:rgb(242, 120, 126);
+    box-shadow:1px 1px 1px rgba(0,0,0,0.3);
+    transition:200ms linear;
+}
+
+.button{
+    height:36px;
+
+}
+
+.buttonsSection>button:hover{
+    background-color:rgb(237, 73, 64);
+    transition:200ms linear;
+
+}
+
+/* ---- menu od filtrów ---- */
+.filterMenuButton {
+   font-size:13px;
+   border:1px rgba(0,0,0,0.3) solid;
+   color:rgba(0,0,0,0.5);
+    
+   padding:3px;
+   box-shadow:1px 1px 1px rgba(0,0,0,0.3);
+   margin:2px; 
+
+   width:30px;
+   height:25px;
+   display:inline-block;
+   text-align:center;
+   transition:200ms linear;
+}
+
+.filterMenuButton:hover {
+   border:1px rgba(0,0,0,1) solid;
+   color:black;
+   box-shadow:1px 1px 1px rgba(0,0,0,1);
+   transition:200ms linear;
+   cursor:pointer;
+}
+
+.foldersMenu{
+    width:170px;
+
+}
+
+.filterMenu{
+    display:none;
+}
+
+
+.showMenu{
+    display:block !important;
+    opacity:1 !important;
+
+}
+/* upperBarPart */
+
+.upperPart{
+    background-color:rgb(207, 70, 77);
+
+    height:200px;
+    width:100%;
+
+    position:relative;
+    top:0px;
+
+    line-height:0px;
+}
+
+/* Zgrupowania */
+.groupSeparator{
+    position:relative;
+    margin:20px;
+    border-bottom:5px black solid;
+    
+    width:100%;
+    font-size:40px;
+    font-weight:bold;
+
+    opacity:0;
+    display:none;
+}
+
+  .buttonsSection{
+    
+  }
+  .buttonsSection>ul>li{
+   margin-top:4px;  
+   list-style-type:none;
+  }
+  
+  .buttonsSection>ul>li>input{
+    transform:rotate(45deg);
+  }
+  
+  .buttonsSection>ul>li>span{
+    margin-left:10px;
+  }
+
+/*other*/
+.show{
+    display:block !important;
+    opacity:1 !important;
+
+}
